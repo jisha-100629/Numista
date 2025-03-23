@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌎 Live Currency & Inflation Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#converter">Currency Converter</a></li>
+            <li><a href="#inflation">Inflation Tracker</a></li>
+        </ul>
+        <div class="clock" id="clock"></div>
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙 / ☀️</button>
+    </nav>
+
+    <header>
+        <h1>💰 Real-Time Currency & Inflation Tracker 🌐</h1>
+    </header>
+
+    <section id="converter" class="card">
+        <h2>Currency Converter</h2>
+        <input type="number" id="amount" placeholder="Amount">
+        <div class="selectors">
+            <select id="fromCurrency"></select>
+            <select id="toCurrency"></select>
+            <button onclick="swapCurrencies()">🔄 Swap</button>
+        </div>
+        <button onclick="convertCurrency()">Convert</button>
+        <div id="result"></div>
+    </section>
+
+    <section id="inflation" class="card">
+        <h2>Real-Time Inflation Tracker</h2>
+        <select id="inflationCountry"></select>
+        <button onclick="showInflation()">Get Inflation</button>
+        <div id="inflationResult"></div>
+    </section>
+
+    <button onclick="clearAll()" class="clear-btn">🧹 Clear All</button>
+
+    <footer>
+        Made with ❤️ by Jake & [Your Name]
+    </footer>
+
+    <script src="currency-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
